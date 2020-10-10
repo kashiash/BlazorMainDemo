@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application>
+  <BOModel>
+    <Class Name="DevExpress.Persistent.BaseImpl.ReportDataV2">
+      <OwnMembers>
+        <Member Name="ParametersObjectType" PropertyEditorType="DevExpress.ExpressApp.Blazor.Editors.TypePropertyEditor" />
+      </OwnMembers>
+    </Class>
+  </BOModel>
+</Application>

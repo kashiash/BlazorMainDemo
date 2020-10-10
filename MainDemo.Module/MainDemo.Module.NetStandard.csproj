@@ -1,0 +1,74 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+    <Configurations>Debug;Release;EasyTest</Configurations>
+    <AssemblyName>MainDemo.Module</AssemblyName>
+    <RootNamespace>MainDemo.Module</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DefineConstants>TRACE;DEBUG</DefineConstants>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DefineConstants>TRACE</DefineConstants>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'EasyTest|AnyCPU' ">
+    <DefineConstants>TRACE;DEBUG;EASYTEST</DefineConstants>
+  </PropertyGroup>
+  <ItemGroup>
+    <None Remove="DatabaseUpdate\Departments.xml" />
+    <None Remove="DatabaseUpdate\EmployeesWithPhoto.xml" />
+    <None Remove="DatabaseUpdate\Resume\Aaron_Borrmann.pdf" />
+    <None Remove="DatabaseUpdate\Resume\Alberta_Berntsen.pdf" />
+    <None Remove="DatabaseUpdate\Resume\Almas_Basinger.pdf" />
+    <None Remove="DatabaseUpdate\Resume\Anita_Benson.pdf" />
+    <None Remove="DatabaseUpdate\Resume\Anita_Boyd.pdf" />
+    <None Remove="DatabaseUpdate\Resume\Carolyn_Baker.pdf" />
+    <None Remove="DatabaseUpdate\Resume\Chandler_Bevington.pdf" />
+    <None Remove="DatabaseUpdate\Resume\Donald_Bradley.pdf" />
+    <None Remove="DatabaseUpdate\Resume\Francine_Bing.pdf" />
+    <None Remove="DatabaseUpdate\Resume\Hewitt_Aiello.pdf" />
+    <None Remove="DatabaseUpdate\Tasks.xml" />
+    <None Remove="Model.DesignedDiffs.Localization.de.xafml" />
+    <None Remove="Model.DesignedDiffs.xafml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="DatabaseUpdate\Departments.xml" />
+    <EmbeddedResource Include="DatabaseUpdate\EmployeesWithPhoto.xml" />
+    <EmbeddedResource Include="DatabaseUpdate\Resume\Aaron_Borrmann.pdf" />
+    <EmbeddedResource Include="DatabaseUpdate\Resume\Alberta_Berntsen.pdf" />
+    <EmbeddedResource Include="DatabaseUpdate\Resume\Almas_Basinger.pdf" />
+    <EmbeddedResource Include="DatabaseUpdate\Resume\Anita_Benson.pdf" />
+    <EmbeddedResource Include="DatabaseUpdate\Resume\Anita_Boyd.pdf" />
+    <EmbeddedResource Include="DatabaseUpdate\Resume\Carolyn_Baker.pdf" />
+    <EmbeddedResource Include="DatabaseUpdate\Resume\Chandler_Bevington.pdf" />
+    <EmbeddedResource Include="DatabaseUpdate\Resume\Donald_Bradley.pdf" />
+    <EmbeddedResource Include="DatabaseUpdate\Resume\Francine_Bing.pdf" />
+    <EmbeddedResource Include="DatabaseUpdate\Resume\Hewitt_Aiello.pdf" />
+    <EmbeddedResource Include="DatabaseUpdate\Tasks.xml" />
+    <EmbeddedResource Include="Model.DesignedDiffs.Localization.de.xafml" />
+    <EmbeddedResource Include="Model.DesignedDiffs.xafml" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="System.Configuration.ConfigurationManager" Version="4.6.0" />
+    <PackageReference Include="System.Drawing.Common" Version="4.5.0" />
+    <PackageReference Include="System.Data.SqlClient" Version="4.6.1" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="DevExpress.ExpressApp" Version="20.2.2-beta" />
+    <PackageReference Include="DevExpress.ExpressApp.AuditTrail" Version="20.2.2-beta" />
+    <PackageReference Include="DevExpress.ExpressApp.ConditionalAppearance" Version="20.2.2-beta" />
+    <PackageReference Include="DevExpress.ExpressApp.ReportsV2" Version="20.2.2-beta" />
+    <PackageReference Include="DevExpress.ExpressApp.Security.Xpo" Version="20.2.2-beta" />
+    <PackageReference Include="DevExpress.ExpressApp.Validation" Version="20.2.2-beta" />
+    <PackageReference Include="DevExpress.ExpressApp.ViewVariantsModule" Version="20.2.2-beta" />
+    <PackageReference Include="DevExpress.ExpressApp.Xpo" Version="20.2.2-beta" />
+    <PackageReference Include="DevExpress.Persistent.Base" Version="20.2.2-beta" />
+    <PackageReference Include="DevExpress.Persistent.BaseImpl" Version="20.2.2-beta" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CarsDb.Module\CarsDb.Module.csproj" />
+    <ProjectReference Include="..\KodyPocztowe.Module\KodyPocztowe.Module.csproj" />
+  </ItemGroup>
+</Project> 
